@@ -1,4 +1,4 @@
-import {ejercicios, indexEjercicios, reps} from "./variables.js"
+import {ejercicios, indexEjercicios, indexGrupo} from "./variables.js"
 import random from "./random.js" 
 import imprimir from "./test.js" 
 import segundos from "./segundos.js"
@@ -20,5 +20,5 @@ export default function amrap(contador) {
         }
     }
     imprimir(titulo, wod, contador)
-    
+    indexGrupo.push(0)
 }

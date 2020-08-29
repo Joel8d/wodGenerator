@@ -40,3 +40,5 @@ export var ejercicios = [
 export var reps = [20, 18, 16, 14, 12, 10]
 
 export var indexEjercicios = []
+
+export var indexGrupo = []

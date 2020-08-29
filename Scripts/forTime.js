@@ -1,7 +1,8 @@
 import random from "./random.js" 
-import {ejercicios, indexEjercicios, reps} from "./variables.js"
+import {ejercicios, indexEjercicios, indexGrupo} from "./variables.js"
 import imprimir from "./test.js" 
 import segundos from "./segundos.js"
+
 
 let modos =[
     "2 rounds",
@@ -24,10 +25,12 @@ export default function forTime(contador) {
                 if (indexEjercicios.includes(ejercicio)){
                     i = i - 1
                 } else {
-                    segundos(ejercicio, wod, 0)}
+                    segundos(ejercicio, wod, 0)
+                }
                 //indexEjercicios.push(ejercicio)                
                 //wod.push(`${reps[random(0, reps.length)]} ${ejercicios[ejercicio]}`)}
             }
+            indexGrupo.push(0)
     }else{ 
         var titulo = [`For Time ${modos[modo]}`]
         for (let i = 0; i < numEjercicios; i++){
@@ -40,6 +43,7 @@ export default function forTime(contador) {
                     //wod.push(`${ejercicios[ejercicio]}`)
                 }
         }
+        indexGrupo.push(2)
     }
     imprimir(titulo, wod, contador)       
 }

@@ -1,4 +1,4 @@
-import {ejercicios, indexEjercicios} from "./variables.js"
+import {ejercicios, indexEjercicios, indexGrupo} from "./variables.js"
 import random from "./random.js" 
 import imprimir from "./test.js" 
 
@@ -15,5 +15,6 @@ export default function  tabata(contador) {
             wod.push(ejercicios[ejercicio])       
         }
     } 
-    imprimir(titulo, wod, contador)  
+    imprimir(titulo, wod, contador)
+    indexGrupo.push(2)  
 }

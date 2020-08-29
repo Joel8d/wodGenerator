@@ -2,6 +2,8 @@ import forTime from "./forTime.js"
 import tabata from "./tabata.js"
 import emom from "./emom.js"
 import amrap from "./amrap.js"
+import { indexGrupo } from "./variables.js"
+
 
 export default function tipowod(arr, contador){
     switch(arr){
@@ -23,4 +25,12 @@ export default function tipowod(arr, contador){
             break;
 
     }
+
+            //Asigna Grupos entre los cuales se pueden hacer draggeables o no 
+            const lista = document.getElementById(`ul ${contador}`);
+            Sortable.create(lista, {
+            //se crea grupo entre los cuales se podrá reasignar los ejercicios
+            group: `${indexGrupo[contador]}` , // set both lists to same group
+            animation: 150
+    });
 }
