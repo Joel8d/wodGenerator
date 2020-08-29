@@ -2,10 +2,9 @@ export default function imprimir(titulos, wod, contador){
     var f = document.createElement('article')
     f.id = contador
     document.getElementById('contenedor_tarjetas').appendChild(f)    
-    
-    
-    var g = document.createElement('div')
-    g.id = `div ${contador}` 
+
+    var g = document.createElement('ul')
+    g.id = `ul ${contador}` 
     document.getElementById(f.id).appendChild(g)
     
     titulos.forEach(element => {

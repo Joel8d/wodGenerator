@@ -21,7 +21,8 @@ export default function segundos(ejercicio, wod, identificador) {
             break;
         case 11:
             indexEjercicios.push(ejercicio) 
-            wod.push([`50 ${ejercicios[ejercicio]}`])   
+            wod.push([`50 ${ejercicios[ejercicio]}`])
+               
             break;
         default:
             if (identificador === 1){
