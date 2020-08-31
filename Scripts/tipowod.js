@@ -25,12 +25,20 @@ export default function tipowod(arr, contador){
             break;
 
     }
-
             //Asigna Grupos entre los cuales se pueden hacer draggeables o no 
             const lista = document.getElementById(`ul ${contador}`);
-            Sortable.create(lista, {
-            //se crea grupo entre los cuales se podrá reasignar los ejercicios
-            group: `${indexGrupo[contador]}` , // set both lists to same group
-            animation: 150
-    });
+            if(indexGrupo[contador] === 1){
+                Sortable.create(lista, {
+                    //se crea grupo entre los cuales se podrá reasignar los ejercicios
+                    group: 2 , // set both lists to same group
+                    animation: 150,
+                    swap: true
+                    });
+            }else{
+                Sortable.create(lista, {
+                //se crea grupo entre los cuales se podrá reasignar los ejercicios
+                group: `${indexGrupo[contador]}` , // set both lists to same group
+                animation: 150 
+                });
+             }
 }

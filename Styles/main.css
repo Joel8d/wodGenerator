@@ -80,7 +80,8 @@ article {
 }
 
 article ul {
-  margin: 20px 10px;
+  margin: 20px 20px 20px 10px;
+  width: 100%;
 }
 
 article ul h1 {
@@ -91,6 +92,37 @@ article ul h1 {
 article ul li {
   padding-left: 15px;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article ul li button {
+  visibility: hidden;
+  width: 10px;
+  height: 10px;
+  background-image: url("../Resources/borrar.svg");
+  background-size: cover;
+  border: none;
+  outline: none;
+}
+
+article ul li:hover button {
+  visibility: visible;
+}
+
+article ul li:hover button:hover {
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 /* On mouse-over, add a deeper shadow */

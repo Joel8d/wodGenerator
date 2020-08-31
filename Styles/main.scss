@@ -56,7 +56,8 @@ article {
     background-color: white;
 
     ul{
-        margin: 20px 10px;
+        margin: 20px 20px 20px 10px;
+        width: 100%;
         
         h1{
             margin: 0 0 0 5px;
@@ -65,10 +66,40 @@ article {
         li{
             padding-left: 15px;
             list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button{
+                visibility: hidden;
+                width: 10px;
+                height: 10px;
+                background-image: url("../Resources/borrar.svg");
+                background-size: cover; 
+                border: none;
+                outline: none;
+
+            }
+        }
+
+        li:hover{
+                button{
+                    visibility: visible;
+
+                }
+                button:hover{
+                    width: 10px;
+                    height: 10px;
+                    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+                    cursor: pointer;
+
+                }
+
+            }
         }
     }
 
-  }
+  
   
   /* On mouse-over, add a deeper shadow */
 article:hover {

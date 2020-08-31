@@ -13,7 +13,6 @@ export default function emom(contador) {
         if (indexEjercicios.includes(ejercicio)){
             i--
         }else{
-            console.log(ejercicio)
             segundos(ejercicio, wod, 0)
         }
     }
