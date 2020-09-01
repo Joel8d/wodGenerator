@@ -7,55 +7,45 @@ var contador = 0
 arrayWod.forEach(Element => tipowod(Element, contador++))
 
 
-
-
-let boton = document.getElementsByClassName("delbut");
-for (let item of boton) {
-    item.onclick = function() {
-    item.parentElement.remove();}
-}
-
-
-
-
-
+//Añade los valores a los draggeables
+//Draggeable Ejercicios
 ejercicios.forEach(Element =>{
         let temp = document.createElement('option');
         temp.innerHTML = Element;
         document.getElementById("addExercise").appendChild(temp);
     }) 
 
-            allreps.forEach(Element =>{
-                let temp = document.createElement('option');
-                temp.innerHTML = Element;
-                document.getElementById("addReps").appendChild(temp);
-            }) 
-
-
-    
-
+//Draggeable Reps
+allreps.forEach(Element =>{
+    let temp = document.createElement('option');
+    temp.innerHTML = Element;
+    document.getElementById("addReps").appendChild(temp);
+}) 
 
 var button = document.getElementById("add")
 button.onclick = function(){
-    
     let e = document.getElementById("addExercise");
     let eValue = e.options[e.selectedIndex].value;
     let f = document.getElementById("SelectCard");
     let fvalue = f.options[f.selectedIndex].value;
     let g = document.getElementById("addReps");
     let gvalue = g.options[g.selectedIndex].value;
-
     let temp = document.createElement('li');
     temp.className = 'Elementos';
+    //Asigna el ejercicio
     if(gvalue === ""){
         temp.innerHTML = `${eValue}`;
     }else{
         temp.innerHTML = `${gvalue} ${eValue}`;
     }
     let but = document.createElement('span');
+    //crea boton eliminar
     but.className = 'delbut'
     but.id = 'delbut';
-
+    but.onclick = function() {
+    but.parentElement.remove();}
+    
+    //selecciona a que tarjeta se añade
     switch(fvalue){
         case("Tarjeta 1"):{
             var tarjeta = document.getElementById("ul 0")

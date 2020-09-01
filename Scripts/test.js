@@ -23,6 +23,8 @@ export default function imprimir(titulos, wod, contador){
         let but = document.createElement('span');
         but.className = 'delbut'
         but.id = 'delbut';
+        but.onclick = function() {
+        but.parentElement.remove();}
         document.getElementById(g.id).appendChild(temp).appendChild(but)
 
     });
