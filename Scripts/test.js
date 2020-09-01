@@ -10,7 +10,6 @@ export default function imprimir(titulos, wod, contador){
     document.getElementById(f.id).appendChild(g)
     
     titulos.forEach(element => {
-        
         let temp = document.createElement('h1');
         temp.className = 'Titulo';
         temp.innerHTML = element;
@@ -27,4 +26,6 @@ export default function imprimir(titulos, wod, contador){
         document.getElementById(g.id).appendChild(temp).appendChild(but)
 
     });
+
+    
 }
