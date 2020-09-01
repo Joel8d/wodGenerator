@@ -22,7 +22,7 @@ function imprimir(titulos, wod, contador) {
     var temp = document.createElement('li');
     temp.className = 'Elementos';
     temp.innerHTML = element;
-    var but = document.createElement('button');
+    var but = document.createElement('span');
     but.className = 'delbut';
     but.id = 'delbut';
     document.getElementById(g.id).appendChild(temp).appendChild(but);

@@ -21,7 +21,7 @@ export default function imprimir(titulos, wod, contador){
         let temp = document.createElement('li');
         temp.className = 'Elementos';
         temp.innerHTML = element;
-        let but = document.createElement('button');
+        let but = document.createElement('span');
         but.className = 'delbut'
         but.id = 'delbut';
         document.getElementById(g.id).appendChild(temp).appendChild(but)

@@ -32,13 +32,16 @@ export default function tipowod(arr, contador){
                     //se crea grupo entre los cuales se podrá reasignar los ejercicios
                     group: 2 , // set both lists to same group
                     animation: 150,
-                    swap: true
+                    chosenClass: "seleccionado",
+                    dragClass: "drag"
                     });
             }else{
                 Sortable.create(lista, {
                 //se crea grupo entre los cuales se podrá reasignar los ejercicios
                 group: `${indexGrupo[contador]}` , // set both lists to same group
-                animation: 150 
+                animation: 150, 
+                chosenClass: "seleccionado",
+                dragClass: "drag"
                 });
              }
 }
