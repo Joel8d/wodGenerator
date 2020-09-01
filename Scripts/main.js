@@ -16,17 +16,20 @@ for (let item of boton) {
 }
 
 
+
+
+
 ejercicios.forEach(Element =>{
         let temp = document.createElement('option');
         temp.innerHTML = Element;
-        addExercise.appendChild(temp);
+        document.getElementById("addExercise").appendChild(temp);
     }) 
 
-        allreps.forEach(Element =>{
-            let temp = document.createElement('option');
-            temp.innerHTML = Element;
-            addReps.appendChild(temp);
-        }) 
+            allreps.forEach(Element =>{
+                let temp = document.createElement('option');
+                temp.innerHTML = Element;
+                document.getElementById("addReps").appendChild(temp);
+            }) 
 
 
     
