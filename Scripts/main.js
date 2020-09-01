@@ -17,8 +17,11 @@ ejercicios.forEach(Element =>{
 
 //Draggeable Reps
 allreps.forEach(Element =>{
-    let temp = document.createElement('option');
+    let temp = document.createElement('option'); 
     temp.innerHTML = Element;
+
+
+    
     document.getElementById("addReps").appendChild(temp);
 }) 
 
