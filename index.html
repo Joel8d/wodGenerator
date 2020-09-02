@@ -18,20 +18,32 @@
         <button onClick="window.location.reload();">Generar</button>
     </div>  
 
-    <select id="addExercise">
-    </select>
+ <!-- Rounded switch -->
+<div class="moreExercise">
+    <h4>Añadir ejercicios</h4>
+    <label class="switch">
+        <input id="checkbox" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+</div>
 
-    <select id="addReps">
-    </select>
 
-    <select id="SelectCard">
-        <option>Tarjeta 1</option>
-        <option>Tarjeta 2</option>
-        <option>Tarjeta 3</option>
-    </select>
 
-    <button id="add">añadir</button>
-
+    <div id="contenedor_addEx" class="contenedor_addEx">
+        <h4>Seleccionar Ejercicio:</h3>
+        <select id="addExercise" class="SelectCard">
+        </select>
+        <h4>Seleccionar Repeticiones:</h3>
+        <select id="addReps" class="SelectCard">
+        </select>
+        <h4>Seleccionar Tarjeta:</h3>
+        <select id="SelectCard" class="SelectCard">
+            <option>Tarjeta 1</option>
+            <option>Tarjeta 2</option>
+            <option>Tarjeta 3</option>
+        </select>
+        <button id="add">añadir</button>
+    </div>
     
 
 </body>

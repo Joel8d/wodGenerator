@@ -19,9 +19,6 @@ ejercicios.forEach(Element =>{
 allreps.forEach(Element =>{
     let temp = document.createElement('option'); 
     temp.innerHTML = Element;
-
-
-    
     document.getElementById("addReps").appendChild(temp);
 }) 
 
@@ -63,4 +60,19 @@ button.onclick = function(){
             tarjeta.appendChild(temp).appendChild(but)
         break;}
     }
+}
+
+
+
+//Funcion aparecer y ocultar
+
+var toggle = document.getElementById("checkbox")
+toggle.onclick = function(){
+    let contAddEx = document.getElementById("contenedor_addEx")
+    if (toggle.checked === true){
+        contAddEx.style.visibility = "visible"
+    }else{
+        contAddEx.style.visibility = "hidden"
+    }
+
 }

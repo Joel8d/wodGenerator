@@ -11,9 +11,13 @@
   font-family: 'testfont';
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,10 +148,10 @@ article:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 
 .button_container button {
-  position: relative;
   vertical-align: top;
   width: 150px;
   height: 60px;
@@ -181,5 +185,169 @@ article:hover {
 
 .Elementos.drag {
   opacity: 0;
+}
+
+.contenedor_addEx {
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 15px 0 15px 0;
+  background-color: white;
+  padding-top: 10px;
+  -webkit-box-shadow: inset 0px 6px 0px 0px rgba(110, 108, 110, 0.452);
+          box-shadow: inset 0px 6px 0px 0px rgba(110, 108, 110, 0.452);
+}
+
+.contenedor_addEx button {
+  margin: 10px 0 10px 0;
+  position: relative;
+  vertical-align: top;
+  width: 100px;
+  height: 40px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #f1c40f;
+  border: 0;
+  border-bottom: 2px solid #e2b607;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #e2b607;
+  box-shadow: inset 0 -2px #e2b607;
+}
+
+.moreExercise {
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #f3cd21;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #f3cd21;
+          box-shadow: 0 0 1px #f3cd21;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.SelectCard {
+  width: 225px;
+  height: 40px;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 0 #918c8c;
+          box-shadow: 0 2px 0 #918c8c;
+  border-radius: 2px;
+  border: 1px solid #918c8c;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding-left: 10px;
+}
+
+.SelectCard option {
+  margin: 40px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.SelectCard ::-ms-expand {
+  display: none;
+}
+
+.SelectCard :hover {
+  border-color: yelow;
+}
+
+.SelectCard :focus {
+  border-color: red;
+  -webkit-box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+          box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: green;
+  outline: none;
+}
+
+@media (max-width: 640px) {
+  article ul li span {
+    visibility: visible;
+    opacity: 0.2;
+  }
 }
 /*# sourceMappingURL=main.css.map */
