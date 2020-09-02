@@ -354,6 +354,8 @@ input:checked + .slider:before {
     opacity: 0;
   }
   article ul li span {
+    width: 25px;
+    height: 25px;
     visibility: visible;
     opacity: 0.2;
   }
