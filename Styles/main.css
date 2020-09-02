@@ -345,6 +345,14 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 640px) {
+  .Elementos.seleccionado {
+    color: red;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .Elementos.drag {
+    opacity: 0;
+  }
   article ul li span {
     visibility: visible;
     opacity: 0.2;
