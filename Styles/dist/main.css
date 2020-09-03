@@ -52,49 +52,47 @@ article {
   display: flex;
   width: 350px;
   background-color: white;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
-article ul {
-  margin: 20px 20px 20px 10px;
+article h1 {
+  margin: 15px 0 0 0;
+}
+article div {
+  margin: 10px 0 10px 0;
   width: 100%;
 }
-article ul h1 {
-  margin: 0 0 0 5px;
-  padding-bottom: 10px;
-}
-article ul li {
+article div div {
+  width: 100%;
   list-style-type: none;
-  width: 100%;
-  margin: 0 10px 0 10px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-article ul .delbut {
+article div div h4 {
+  width: 80%;
+}
+article div .delbut {
   visibility: visible;
-  width: 18px;
-  height: 18px;
+  margin-right: 17px;
+  width: 20px;
+  height: 20px;
   background-color: white;
   background-image: url("../Resources/icons8-delete-30.png");
   background-size: cover;
   border: none;
   outline: none;
 }
-article ul .movebut {
+article div .movebut {
   visibility: visible;
+  margin-left: 8px;
   width: 18px;
   height: 18px;
   background-color: white;
   background-image: url("../Resources/icons8-menu-vertical-50.png");
   background-size: cover;
-  border: none;
-  margin: none;
-  outline: none;
-}
-article ul .delbut:hover {
-  cursor: pointer;
-}
-article ul .movebut:hover {
-  cursor: move;
 }
 
 /* On mouse-over, add a deeper shadow */

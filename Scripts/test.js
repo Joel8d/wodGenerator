@@ -29,6 +29,9 @@ export default function imprimir(titulos, wod, contador){
         delBut.onmousedown = function() {
             delBut.parentElement.remove();
         }
+        delBut.ontouchend = function() {
+            delBut.parentElement.remove();
+        }
         let padre = document.getElementById(g.id)
         let div = document.createElement('div')
         div.className = 'seleccion'
