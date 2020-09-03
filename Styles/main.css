@@ -198,6 +198,7 @@ article:hover {
 
 .Elementos.drag {
   opacity: 0;
+  color: green;
 }
 
 .contenedor_addEx {

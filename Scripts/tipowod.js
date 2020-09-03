@@ -33,7 +33,12 @@ export default function tipowod(arr, contador){
                     group: 2 , // set both lists to same group
                     animation: 150,
                     chosenClass: "seleccionado",
-                    dragClass: "drag"
+                    dragClass: "drag",
+                    removeOnSpill: true, // Enable plugin
+                    // Called when item is spilled
+                    onSpill: function(/**Event*/evt) {
+                        evt.item // The spilled item
+                    }
                     });
             }else{
                 Sortable.create(lista, {
@@ -41,7 +46,12 @@ export default function tipowod(arr, contador){
                 group: `${indexGrupo[contador]}` , // set both lists to same group
                 animation: 150, 
                 chosenClass: "seleccionado",
-                dragClass: "drag"
+                dragClass: "drag",
+                removeOnSpill: true, // Enable plugin
+                // Called when item is spilled
+                onSpill: function(/**Event*/evt) {
+                    evt.item // The spilled item
+                }
                 });
              }
 }
