@@ -86,8 +86,7 @@ article {
         }
 
         .delbut{
-        
-            visibility: visible;
+            visibility: hidden;
             margin-right: 17px;
             width: 20px;
             height: 20px;
@@ -98,21 +97,13 @@ article {
             outline: none;
         }
 
-        .movebut{
-            visibility: visible;
-            margin-left: 8px;
-            width: 18px;
-            height: 18px;
-            background-color: white;
-            background-image: url("../Resources/icons8-menu-vertical-50.png");
-            background-size: cover; 
+        :hover{
+            .delbut{
+                visibility: visible;
+            }
         }
      }
     }
-  /* On mouse-over, add a deeper shadow */
-article:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
   
 
 .button_container{
@@ -151,28 +142,18 @@ article:hover {
 
 }
 
-.Elementos.seleccionado{
-    color: red;
-    transform: rotate(2deg);
-}
-
-.Elementos.drag{
-    opacity: 0;
-    color: green;
-}
-
 
 
 
 .contenedor_addEx{
-    visibility: hidden;
+    visibility: none;
     width: 100%;
     height: auto;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    margin: 15px 0 15px 0;
+    margin: 0px 0 15px 0;
     background-color: white;
     padding-top: 10px;
     box-shadow: inset 0px 6px 0px 0px rgba(110, 108, 110, 0.452);
@@ -197,6 +178,7 @@ article:hover {
  }
 
 .moreExercise{
+    margin-bottom: 15px;
     width: 170px;
     display: flex;
     justify-content: space-between;
@@ -310,37 +292,4 @@ article:hover {
         opacity: 0;
     }
 
-    article {
-        ul{
-            li{
-    
-                span{
-                    width: 80px;
-                    height: 35px;
-                    background-size: 25px 25px;
-                    visibility: visible;
-                    opacity: 0.2;
-                    background-repeat: no-repeat;
-                    background-position: right;
-                }
-
-            }
-    
-            // li:hover{
-            //     cursor: move;
-            //         span{
-            //             visibility: visible;
-    
-            //         }
-            //         span:hover{
-            //            // box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
-            //             cursor: pointer;
-    
-            //         }
-    
-            //     }
-            // }
-        }
-  }
 }
-

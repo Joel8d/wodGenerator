@@ -89,8 +89,10 @@ toggle.onclick = function(){
     let contAddEx = document.getElementById("contenedor_addEx")
     if (toggle.checked === true){
         contAddEx.style.visibility = "visible"
+        contAddEx.style.display= "flex";
     }else{
-        contAddEx.style.visibility = "hidden"
+        contAddEx.style.visibility = "none"
+        contAddEx.style.display= "none";
     }
 
 }

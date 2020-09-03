@@ -37,7 +37,7 @@ button.onclick = function () {
   var fvalue = f.options[f.selectedIndex].value;
   var g = document.getElementById("addReps");
   var gvalue = g.options[g.selectedIndex].value;
-  var temp = document.createElement('li');
+  var temp = document.createElement('h4');
   temp.className = 'Elementos'; //Asigna el ejercicio
 
   if (gvalue === "") {
@@ -53,29 +53,66 @@ button.onclick = function () {
 
   but.onclick = function () {
     but.parentElement.remove();
-  }; //selecciona a que tarjeta se añade
+  };
 
+  var moveBut = document.createElement('h5');
+  moveBut.className = 'movebut'; //selecciona a que tarjeta se añade
 
   switch (fvalue) {
     case "Tarjeta 1":
       {
         var tarjeta = document.getElementById("ul 0");
-        tarjeta.appendChild(temp).appendChild(but);
+        console.log(tarjeta);
+        var div = document.createElement('div');
+        div.className = 'seleccion';
+        tarjeta.appendChild(div);
+        div.append(moveBut, temp, but);
         break;
       }
 
     case "Tarjeta 2":
       {
         var tarjeta = document.getElementById("ul 1");
-        tarjeta.appendChild(temp).appendChild(but);
+        console.log(tarjeta);
+
+        var _div = document.createElement('div');
+
+        _div.className = 'seleccion';
+        tarjeta.appendChild(_div);
+
+        _div.append(moveBut, temp, but);
+
         break;
       }
 
     case "Tarjeta 3":
       {
         var tarjeta = document.getElementById("ul 2");
-        tarjeta.appendChild(temp).appendChild(but);
+        console.log(tarjeta);
+
+        var _div2 = document.createElement('div');
+
+        _div2.className = 'seleccion';
+        tarjeta.appendChild(_div2);
+
+        _div2.append(moveBut, temp, but);
+
         break;
       }
+  }
+}; //Funcion aparecer y ocultar
+
+
+var toggle = document.getElementById("checkbox");
+
+toggle.onclick = function () {
+  var contAddEx = document.getElementById("contenedor_addEx");
+
+  if (toggle.checked === true) {
+    contAddEx.style.visibility = "visible";
+    contAddEx.style.display = "flex";
+  } else {
+    contAddEx.style.visibility = "none";
+    contAddEx.style.display = "none";
   }
 };

@@ -38,7 +38,7 @@ export default function tipowod(arr, contador){
                     // Called when item is spilled
                     onSpill: function(/**Event*/evt) {
                         evt.item // The spilled item
-                    }
+                    },
                     });
             }else{
                 Sortable.create(lista, {
