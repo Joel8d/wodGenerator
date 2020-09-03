@@ -143,14 +143,6 @@ article div .movebut {
   background-size: cover;
 }
 
-article div .delbut:hover {
-  cursor: pointer;
-}
-
-article div .movebut:hover {
-  cursor: move;
-}
-
 /* On mouse-over, add a deeper shadow */
 article:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);

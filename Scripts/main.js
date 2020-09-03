@@ -30,7 +30,7 @@ button.onclick = function(){
     let fvalue = f.options[f.selectedIndex].value;
     let g = document.getElementById("addReps");
     let gvalue = g.options[g.selectedIndex].value;
-    let temp = document.createElement('li');
+    let temp = document.createElement('h4');
     temp.className = 'Elementos';
     //Asigna el ejercicio
     if(gvalue === ""){
@@ -44,12 +44,20 @@ button.onclick = function(){
     but.id = 'delbut';
     but.onclick = function() {
     but.parentElement.remove();}
+
+    let moveBut = document.createElement('h5');
+    moveBut.className = 'movebut'
     
     //selecciona a que tarjeta se añade
     switch(fvalue){
         case("Tarjeta 1"):{
-            var tarjeta = document.getElementById("ul 0")
-            tarjeta.appendChild(temp).appendChild(but)
+            var tarjeta = document.getElementById("ul 0");
+            console.log(tarjeta)
+            let div = document.createElement('div')
+            div.className = 'seleccion'
+            tarjeta.appendChild(div)
+            div.append(moveBut, temp, but)
+            
         break;}
         case("Tarjeta 2"): {
             var tarjeta = document.getElementById("ul 1")
