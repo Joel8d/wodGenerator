@@ -60,12 +60,22 @@ button.onclick = function(){
             
         break;}
         case("Tarjeta 2"): {
-            var tarjeta = document.getElementById("ul 1")
-            tarjeta.appendChild(temp).appendChild(but)
+            var tarjeta = document.getElementById("ul 1");
+            console.log(tarjeta)
+            let div = document.createElement('div')
+            div.className = 'seleccion'
+            tarjeta.appendChild(div)
+            div.append(moveBut, temp, but)
+            
         break;}
         case("Tarjeta 3"):{
-            var tarjeta = document.getElementById("ul 2")
-            tarjeta.appendChild(temp).appendChild(but)
+            var tarjeta = document.getElementById("ul 2");
+            console.log(tarjeta)
+            let div = document.createElement('div')
+            div.className = 'seleccion'
+            tarjeta.appendChild(div)
+            div.append(moveBut, temp, but)
+            
         break;}
     }
 }
