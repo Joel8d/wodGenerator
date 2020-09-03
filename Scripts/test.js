@@ -17,16 +17,21 @@ export default function imprimir(titulos, wod, contador){
     });
 
     wod.forEach(element => {
+        let moveBut = document.createElement('img');
+        moveBut.className = 'movebut'
         let temp = document.createElement('li');
         temp.className = 'Elementos';
         temp.innerHTML = element;
-        let but = document.createElement('span');
-        but.className = 'delbut'
-        but.id = 'delbut';
-        but.onmousedown = function() {
-        but.parentElement.remove();}
-        document.getElementById(g.id).appendChild(temp).appendChild(but)
-
+        let delBut = document.createElement('button');
+        delBut.className = 'delbut'
+        delBut.id = 'delbut';
+        delBut.onmousedown = function() {
+            delBut.parentElement.remove();
+        }
+        let padre = document.getElementById(g.id)
+        let div = document.createElement('li')
+        div.className = 'seleccion'
+        padre.appendChild(div).append(moveBut, temp, delBut)
     });
 
     

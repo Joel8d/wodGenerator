@@ -19,12 +19,22 @@ function imprimir(titulos, wod, contador) {
     document.getElementById(g.id).appendChild(temp);
   });
   wod.forEach(function (element) {
+    var moveBut = document.createElement('img');
+    moveBut.className = 'movebut';
     var temp = document.createElement('li');
     temp.className = 'Elementos';
     temp.innerHTML = element;
-    var but = document.createElement('span');
-    but.className = 'delbut';
-    but.id = 'delbut';
-    document.getElementById(g.id).appendChild(temp).appendChild(but);
+    var delBut = document.createElement('button');
+    delBut.className = 'delbut';
+    delBut.id = 'delbut';
+
+    delBut.onmousedown = function () {
+      delBut.parentElement.remove();
+    };
+
+    var padre = document.getElementById(g.id);
+    var div = document.createElement('li');
+    div.className = 'seleccion';
+    padre.appendChild(div).append(moveBut, temp, delBut);
   });
 }

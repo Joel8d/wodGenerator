@@ -94,40 +94,51 @@ article ul h1 {
 }
 
 article ul li {
-  padding-left: 15px;
+  width: 100%;
   list-style-type: none;
+  background-color: white;
+  width: 100%;
+  margin: 0 10px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-article ul li span {
-  visibility: hidden;
+article ul .delbut {
+  visibility: visible;
   width: 18px;
   height: 18px;
   background-color: white;
-  background-image: url("https://img.icons8.com/ios-glyphs/344/delete-sign.png");
+  background-image: url("../Resources/icons8-delete-30.png");
   background-size: cover;
   border: none;
   outline: none;
 }
 
-article ul li:hover {
-  cursor: move;
-}
-
-article ul li:hover span {
+article ul .movebut {
   visibility: visible;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  background-image: url("../Resources/icons8-menu-vertical-50.png");
+  background-size: cover;
+  border: 0px;
+  margin: none;
+  outline: none;
 }
 
-article ul li:hover span:hover {
+article ul .delbut:hover {
   cursor: pointer;
+}
+
+article ul .movebut:hover {
+  cursor: move;
 }
 
 /* On mouse-over, add a deeper shadow */
