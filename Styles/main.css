@@ -81,24 +81,31 @@ article {
   display: flex;
   width: 350px;
   background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-article ul {
-  margin: 20px 20px 20px 10px;
+article h1 {
+  margin: 15px 0 0 0;
+}
+
+article div {
+  margin: 10px 0 10px 0;
   width: 100%;
 }
 
-article ul h1 {
-  margin: 0 0 0 5px;
-  padding-bottom: 10px;
-}
-
-article ul li {
+article div div {
   width: 100%;
   list-style-type: none;
   background-color: white;
-  width: 100%;
-  margin: 0 10px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,8 +117,13 @@ article ul li {
           align-items: center;
 }
 
-article ul .delbut {
+article div div h4 {
+  width: 80%;
+}
+
+article div .delbut {
   visibility: visible;
+  margin-right: 17px;
   width: 18px;
   height: 18px;
   background-color: white;
@@ -121,23 +133,21 @@ article ul .delbut {
   outline: none;
 }
 
-article ul .movebut {
+article div .movebut {
   visibility: visible;
+  margin-left: 8px;
   width: 18px;
   height: 18px;
   background-color: white;
   background-image: url("../Resources/icons8-menu-vertical-50.png");
   background-size: cover;
-  border: 0px;
-  margin: none;
-  outline: none;
 }
 
-article ul .delbut:hover {
+article div .delbut:hover {
   cursor: pointer;
 }
 
-article ul .movebut:hover {
+article div .movebut:hover {
   cursor: move;
 }
 
